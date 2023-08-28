@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 body{
     background-color: hsl(34, 70%, 96%);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .NameSection{
@@ -9,19 +12,31 @@ body{
 }
 
 .Bold{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 5em;
     line-height: 1em;
-    margin: 30px 0px;
-}
-#About{
-    position: absolute;
-    top: 30px;
-    right: 20px;
 }
 
-#inline{
+#inlineTop{
+    display: inline-block;
+    width: 100%;
+}
+#About{
+    float: right;
+}
+#Name{
+    float: left;
+    margin: 30px 0px 0px;
+    width: fit-content;
+}
+#BioStud{
+    float: left;
+    margin: 0px 0px 30px;
+    width: fit-content;
+}
+
+
+#inlineBot{
     display: inline-block;
     width: 100%;
 }
@@ -35,10 +50,26 @@ body{
 }
 
 #bannerSection > img{
-width: 100%;
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    
 }
 
 #bannerSection{
     border-top: 2px solid #271302;
     border-bottom: 2px solid #271302;
+}
+
+#QualificationSection{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #271302;
+}
+
+#qual{
+    border-right: 2px solid #271302;
+    width: fit-content;
+    margin: 30px 0px;
+    padding-right: 10px;
 }
