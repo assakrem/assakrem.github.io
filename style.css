@@ -1,0 +1,44 @@
+body{
+    background-color: hsl(34, 70%, 96%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.NameSection{
+    position: relative;
+    height: fit-content;
+}
+
+.Bold{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    line-height: 1em;
+    margin: 30px 0px;
+}
+#About{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+#inline{
+    display: inline-block;
+    width: 100%;
+}
+
+#Adresse{
+    float: left;
+}
+
+#Scroll{
+    float: right;
+}
+
+#bannerSection > img{
+width: 100%;
+}
+
+#bannerSection{
+    border-top: 2px solid #271302;
+    border-bottom: 2px solid #271302;
+}
