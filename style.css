@@ -1,81 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
-body{
+:root {
+    --TextColor: #271302;
+    --Border: 2px solid var(--TextColor);
+}
+
+
+body {
     background-color: hsl(34, 70%, 96%);
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-.NameSection{
+
+/*---------------------Name Section----------------------*/
+
+
+.NameSection {
     position: relative;
     height: fit-content;
 }
 
-.Bold{
+.Bold {
     font-weight: bold;
     font-size: 5em;
     line-height: 1em;
 }
 
-#inlineTop{
+.TBmargin {
+    margin: 30px 0px;
+}
+
+#inlineTop {
     display: inline-block;
     width: 100%;
 }
-#About{
+
+#About {
     float: right;
 }
-#Name{
+
+#Name {
     float: left;
     margin: 30px 0px 0px;
     width: fit-content;
 }
-#BioStud{
+
+#BioStud {
     float: left;
     margin: 0px 0px 30px;
     width: fit-content;
 }
 
 
-#inlineBot{
+#inlineBot {
     display: inline-block;
     width: 100%;
 }
 
-#Adresse{
+#Adresse {
     float: left;
 }
 
-#Scroll{
+#Scroll {
     float: right;
 }
 
-#bannerSection > img{
+/*---------------------Banner Image Section----------------------*/
+
+#bannerSection>img {
     width: 100%;
     min-height: 300px;
     object-fit: cover;
-    
+
 }
 
-#bannerSection{
-    border-top: 2px solid #271302;
-    border-bottom: 2px solid #271302;
+#bannerSection {
+    border-top: var(--Border);
+    border-bottom: var(--Border);
 }
 
-#QualificationSection{
+/*---------------------Qualification Section----------------------*/
+
+#QualificationSection {
     display: flex;
     width: 100%;
-    border-bottom: 2px solid #271302;
+    border-bottom: var(--Border);
 }
 
-#qual{
-    border-right: 2px solid #271302;
+#QualificationSectionTitle{
+    border-right: var(--Border);
     width: fit-content;
-    margin: 30px 0px;
     padding-right: 10px;
 }
 
+#QualificationContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+.floatRight {
+    display: block;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---------------------Professional Experience Section----------------------*/
+
+#ExperienceProfessionnelle{
+    border-bottom: var(--Border);
+}
+
+
+/*---------------------Media Query----------------------*/
+
 @media only screen and (max-width: 412px) {
-    .Bold{
+    .Bold {
         font-size: 3em;
     }
 }
