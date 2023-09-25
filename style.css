@@ -47,7 +47,6 @@ body {
     background-color: var(--TextColor);
     border-radius: 28px;
     cursor: pointer;
-    color: #ffffff;
     padding: 14px 28px;
     display: flex;
     justify-content: center;
