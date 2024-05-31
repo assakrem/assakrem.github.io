@@ -26,50 +26,50 @@ body {
 /* Copy this code after the above code */
 @keyframes customAni {
     0% {
-      animation-timing-function: ease-in;
-      opacity: 1;
-      transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-45px);
     }
-  
+
     24% {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     40% {
-      animation-timing-function: ease-in;
-      transform: translateY(-24px);
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
     }
-  
+
     65% {
-      animation-timing-function: ease-in;
-      transform: translateY(-12px);
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
     }
-  
+
     82% {
-      animation-timing-function: ease-in;
-      transform: translateY(-6px);
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
     }
-  
+
     93% {
-      animation-timing-function: ease-in;
-      transform: translateY(-4px);
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
     }
-  
+
     25%,
     55%,
     75%,
     87% {
-      animation-timing-function: ease-out;
-      transform: translateY(0px);
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
     }
-  
+
     100% {
-      animation-timing-function: ease-out;
-      opacity: 1;
-      transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
     }
-  }
-  
+}
+
 
 .animation {
     animation: customAni 1s ease 0s 1 normal none;
@@ -93,6 +93,13 @@ body {
 
 .FirstPage p {
     font-size: 12rem;
+}
+
+@media screen and (max-width: 1200px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .FirstPage p {
+        font-size: 8rem;
+    }
 }
 
 .FirstPage img {
@@ -143,7 +150,7 @@ body {
 }
 
 .SecondPage .card p {
-    --marginHeigt : 8px;
+    --marginHeigt: 8px;
     margin-top: var(--marginHeigt);
     margin-bottom: var(--marginHeigt);
 }
@@ -170,17 +177,17 @@ body {
     margin-bottom: 0px;
 }
 
-.SecondPage .downloadLink{
+.SecondPage .downloadLink {
     display: flex;
     align-items: center;
 }
 
-.SecondPage .downloadLink a{
+.SecondPage .downloadLink a {
     color: var(--WhiteColor);
     text-decoration: none;
 }
 
-.SecondPage .downloadLink img{
+.SecondPage .downloadLink img {
     margin: 5px;
     margin-left: 10px;
     margin-right: 10px;
@@ -190,11 +197,11 @@ body {
     border-radius: 0px;
 }
 
-#CVImage{
+#CVImage {
     filter: invert(0%);
 }
 
-#CVLink{
+#CVLink {
     color: var(--BlackColor);
 }
 
@@ -217,7 +224,7 @@ body {
 
 /**** footer ****/
 
-.Footer{
+.Footer {
     width: var(--PageWidth);
     min-height: 200px;
     background-color: var(--BlackColor);
@@ -225,12 +232,12 @@ body {
     overflow: hidden;
 }
 
-.Footer div{
+.Footer div {
     display: flex;
     align-items: center;
 }
 
-.Footer div img{
+.Footer div img {
     margin: 5px;
     margin-left: 10px;
     margin-right: 10px;
