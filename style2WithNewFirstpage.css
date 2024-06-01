@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Poetsen+One&display=swap');
+
+body {
+    --BlackColor: rgb(41, 38, 38);
+    --BlueColor: rgb(142, 127, 228);
+    --WhiteColor: rgb(241, 235, 226);
+
+    --PageWidth: calc(100vw - (100vw - 100%));
+
+    margin: 0;
+
+    color: var(--BlackColor);
+
+    /** font **/
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/*** page 1 ***/
+
+.FirstPage {
+    width: var(--PageWidth);
+    height: 100vh;
+    background-color: var(--BlackColor);
+    position: relative;
+    color: var(--WhiteColor);
+}
+
+.poetsenFont {
+    /** font **/
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.FirstPage p {
+    font-size: 12rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.FirstPage img {
+    position: absolute;
+    --ImgWidth: 150px;
+    width: var(--ImgWidth);
+    height: var(--ImgWidth);
+}
+
+#img1 {
+    bottom: 0px;
+}
+
+#img2 {
+    top: 0px;
+    right: 0px;
+    transform: scale(-1, -1);
+}
+
+/**** page2 *****/
+
+.SecondPage {
+    width: var(--PageWidth);
+    min-height: 100vh;
+    background-color: var(--WhiteColor);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 10px;
+    align-items: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 260px;
+    border-radius: 20px;
+    padding: 10px;
+    height: calc(100vh - 80px);
+
+    --defaultColor: rgba(255, 255, 255, 0);
+    background-color: var(--defaultColor);
+
+    position: relative;
+}
+
+.SecondPage .card p {
+    --marginHeigt: 8px;
+    margin-top: var(--marginHeigt);
+    margin-bottom: var(--marginHeigt);
+}
+
+#personalPhoto {
+    width: 120px;
+    border-radius: 50px;
+}
+
+.border {
+    border: 1px solid var(--BlackColor);
+}
+
+.card img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.SecondPage .downloadLink {
+    display: flex;
+    align-items: center;
+}
+
+.SecondPage .downloadLink a {
+    color: var(--WhiteColor);
+    text-decoration: none;
+}
+
+.SecondPage .downloadLink img {
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    filter: invert(100%);
+    border-radius: 0px;
+}
+
+#CVImage {
+    filter: invert(0%);
+}
+
+#CVLink {
+    color: var(--BlackColor);
+}
+
+/**** third page ****/
+
+.ThirdPage {
+    width: var(--PageWidth);
+    height: 100vh;
+    background-color: var(--BlueColor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url(SvgShape.svg);
+    background-size: cover;
+}
+
+/**** footer ****/
+
+.Footer {
+    width: var(--PageWidth);
+    min-height: 200px;
+    background-color: var(--BlackColor);
+    color: var(--WhiteColor);
+    overflow: hidden;
+}
+
+.Footer div {
+    display: flex;
+    align-items: center;
+}
+
+.Footer div img {
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 20px;
+    filter: invert(100%);
+}
