@@ -8,27 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M_ASSAKREM</title>
     <link rel="stylesheet" href="style2WithNewFirstpage.css">
-    <link rel="icon" type="image/x-icon" href="utilisateur.ico">
+    <link rel="icon" type="image/x-icon" href="images/utilisateur.ico">
 
 </head>
 
 <body>
 
     <div class="FirstPage">
-        <img id="img1" src="leftStar.png" alt="leftStar">
+        <img id="img1" src="images/leftStar.png" alt="leftStar">
         <p class="poetsenFont animation">M</p>
-        <img id="img2" src="leftStar.png" alt="RightStar">
+        <img id="img2" src="images/leftStar.png" alt="RightStar">
     </div>
 
     <div class="SecondPage">
         <div class="card">
             <h2>Mehdi ASSAKREM</h2>
-            <img id="personalPhoto" src="imagepersonnellePNG.png" alt="personal photo">
+            <img id="personalPhoto" src="images/imagepersonnellePNG.png" alt="personal photo">
             <p>Hello, I'm a graduate with a Masters degree in <b> Plant Biotechnology </b> ready to enter the work force
                 and performe my best in the tasks givven to me.</p>
 
             <div class="downloadLink">
-                <img id="CVImage" src="telechargements.png" alt="download" >
+                <img id="CVImage" src="images/telechargements.png" alt="download">
                 <a id="CVLink" href="CVEnglishWithCertifact_compressed.pdf"> Check out My CV</a>
             </div>
 
@@ -38,10 +38,10 @@
             <p>Plant biotechnology for plant improvement</p>
             <p>University of Science | Rabat</p>
             <p> <b>2023</b></p>
-            <img src="master.png" alt="master">
+            <img src="images/master.png" alt="master">
 
             <div class="downloadLink">
-                <img src="telechargements.png" alt="download">
+                <img src="images/telechargements.png" alt="download">
                 <a href="PFE final corrigé.pdf"> download and examine my project</a>
             </div>
 
@@ -52,10 +52,10 @@
             <p>Biology, Neuroscience speciality</p>
             <p>University of Science | Rabat</p>
             <p> <b>2020</b> </p>
-            <img src="licence.png" alt="licence">
+            <img src="images/licence.png" alt="licence">
 
             <div class="downloadLink">
-                <img src="telechargements.png" alt="download">
+                <img src="images/telechargements.png" alt="download">
                 <a href="pfe Microbiome et Cancer cervical v2.pdf"> download and examine my project</a>
             </div>
 
@@ -81,27 +81,91 @@
 
     <div class="Footer">
         <div>
-            <img src="calendrier.png" alt="date">
+            <img src="images/calendrier.png" alt="date">
             <p>15 . 10 . 1998</p>
         </div>
         <div>
-            <img src="telephone.png" alt="phone">
+            <img src="images/telephone.png" alt="phone">
             <p>06 39 11 90 41</p>
         </div>
         <div>
-            <img src="mail.png" alt="mail">
+            <img src="images/mail.png" alt="mail">
             <p>s.mehdi.assakrem@gmail.com</p>
         </div>
         <div>
-            <img src="pin.png" alt="address">
+            <img src="images/pin.png" alt="address">
             <p>Avenue Bouregregue, appt 30 imm 2, sala al jadida</p>
         </div>
         <div>
-            <img src="star.png" alt="country">
+            <img src="images/star.png" alt="country">
             <p>sala, Maroc</p>
         </div>
     </div>
 
 </body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import { collection, addDoc, doc, setDoc, getDocs, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMReaOr92zpBNHstITg83ZRvZOnhqq-6Y",
+        authDomain: "testprojectuserviews.firebaseapp.com",
+        projectId: "testprojectuserviews",
+        storageBucket: "testprojectuserviews.appspot.com",
+        messagingSenderId: "239644535493",
+        appId: "1:239644535493:web:b5835b99a9f42f80a01eac",
+        measurementId: "G-0CXELBE7KM"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    let MyIP = "";
+
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            MyIP = data.ip;
+            // console.log(data.ip);
+        })
+        .catch(error => {
+            console.log('Error:', error);
+        });
+
+
+
+    let myCollection = collection(db, "users");
+
+    const querySnapshot = await getDocs(myCollection);
+    // querySnapshot.forEach((doc) => {
+    //     console.log(doc.data());
+    // });
+
+    let Data = {
+        dateOfEntry: Timestamp.fromDate(new Date()),
+        Ip: MyIP
+    }
+
+    async function addNewDocument(testData){
+        let newDoc = await addDoc(myCollection,testData);
+    }
+
+    async function updateDocument(documentId, newData){
+        let updatedDoc = await setDoc(doc(db, "users", documentId), newData);
+    }
+
+    addNewDocument(Data);
+
+</script>
 
 </html>
